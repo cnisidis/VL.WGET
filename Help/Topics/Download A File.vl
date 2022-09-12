@@ -13,15 +13,52 @@
         <FullNameCategoryReference ID="Primitive" />
       </p:NodeReference>
       <Patch Id="UU0RiW4EihkLdscroHLmLa">
-        <Canvas Id="Hfx11akNNbvMrX0DAYlp3M" CanvasType="Group" />
+        <Canvas Id="Hfx11akNNbvMrX0DAYlp3M" CanvasType="Group">
+          <Node Bounds="465,296" Id="Kwcv4E5z5iqPdqFiSdllQy">
+            <p:NodeReference LastCategoryFullName="VL.WGET" LastSymbolSource="VL.WGET.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="WGetFile" />
+            </p:NodeReference>
+            <Pin Id="MisjCaBqppyPSdOPxgF7PX" Name="Apply" Kind="InputPin" />
+            <Pin Id="K83f3Xte42WLStVeP9ANzU" Name="Address" Kind="InputPin" />
+            <Pin Id="QwjENQNr1PZMwPKuJUfXj4" Name="LocalFolder" Kind="InputPin" />
+            <Pin Id="BIbS2v2rWyyMHjFlgYS3Uo" Name="WebClient" Kind="OutputPin" />
+            <Pin Id="Spkr40O5ItwOg3YtHvtS4L" Name="Is Busy" Kind="OutputPin" />
+          </Node>
+          <Pad Id="NqnRUoqanFqOJyJsWAN0kF" Comment="Apply" Bounds="466,87,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation>
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="EDdkW8sKmiHOur55UlxB0F" Comment="Address" Bounds="492,169,324,17" ShowValueBox="true" isIOBox="true" Value="http://bbnet.gein.noa.gr/tmp/EPI_20080101_20200101_1246.txt">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="NBcH21oDbdPK98vOauYw1D" Comment="LocalFolder" Bounds="519,277,258,18" ShowValueBox="true" isIOBox="true" Value="..\..\..\..\Eartquakes_\data\async_str.txt">
+            <p:TypeAnnotation LastCategoryFullName="IO" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Path" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="B6vlIaBCO02O4nSuK1zCqJ" Comment="Is Busy" Bounds="518,366,35,35" ShowValueBox="true" isIOBox="true" />
+        </Canvas>
         <Patch Id="TgqitzhDk9TQAgWU2JqJMH" Name="Create" />
         <Patch Id="O9TEqUYoED3QQlqNvPYYIx" Name="Update" />
         <ProcessDefinition Id="R79GkV0gmhNLu1AVdI0Oy7">
           <Fragment Id="LF51xnLrgGUPLIb4xURP7G" Patch="TgqitzhDk9TQAgWU2JqJMH" Enabled="true" />
           <Fragment Id="Pip4XH7LVoNNJbHyxg1Sg6" Patch="O9TEqUYoED3QQlqNvPYYIx" Enabled="true" />
         </ProcessDefinition>
+        <Link Id="G2FS8cSzDVfLVIInTbbpBg" Ids="NqnRUoqanFqOJyJsWAN0kF,MisjCaBqppyPSdOPxgF7PX" />
+        <Link Id="BJ6EBSrp4g8OZuaFuMBic5" Ids="EDdkW8sKmiHOur55UlxB0F,K83f3Xte42WLStVeP9ANzU" />
+        <Link Id="MaohCQioj9RMbKAZkFqbiD" Ids="NBcH21oDbdPK98vOauYw1D,QwjENQNr1PZMwPKuJUfXj4" />
+        <Link Id="QMCedvGPGxRPJYatainJ00" Ids="Spkr40O5ItwOg3YtHvtS4L,B6vlIaBCO02O4nSuK1zCqJ" />
       </Patch>
     </Node>
   </Patch>
   <NugetDependency Id="CzugMRtASiWQVYnujLq5Fc" Location="VL.CoreLib" Version="2021.4.10-1018-g933c4b477f" />
+  <NugetDependency Id="JVbOlbZ8iNIOOXt50kaSAY" Location="VL.WGET" Version="0.0.0.0" />
 </Document>
